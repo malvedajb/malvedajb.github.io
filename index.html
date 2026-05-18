@@ -3,9 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gabriel Pires | Professional Web Designer</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Test page</h1>
+    <header>
+        <nav class="container">
+            <div class="logo">Personal</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="subtitle">GABRIEL PIRES</span>
+                    <h1>The Simple, Clean Design</h1>
+                    <p>Agency provides a full service range including technical skills, design, business understanding.</p>
+                    <a href="#portfolio" class="btn btn-primary">SEE MY WORK</a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <div class="floating-badge top-left"></div>
+                        <div class="floating-badge bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <span class="section-subtitle">SERVICE</span>
+                <h2 class="section-title">How I Can Help You With</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Design</h3>
+                        <p>Agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Development</h3>
+                        <p>Hire to outsource your digital marketing efforts, instead of handling in-house can provide your business.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <p class="service-footer">Want more service? <a href="#">Explore Now</a></p>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">PORTFOLIO</span>
+                        <h2 class="section-title">Latest Work</h2>
+                    </div>
+                    <a href="#" class="btn btn-outline">EXPLORE MORE</a>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="item-overlay">
+                            <span class="item-category">Design</span>
+                            <h4 class="item-title">SOFA</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="item-overlay">
+                            <span class="item-category">Branding</span>
+                            <h4 class="item-title">KeyBoard</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="item-overlay">
+                            <span class="item-category">Illustration</span>
+                            <h4 class="item-title">Work Media</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-form-wrapper">
+                    <h3>Get In Touch</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="" disabled selected>Subject</option>
+                                <option value="design">Design</option>
+                                <option value="development">Development</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">SUBMIT NOW</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <span class="section-subtitle">CONTACT</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                    <ul class="contact-details">
+                        <li>📍 2247 Lunetta Street, TX 76301</li>
+                        <li>📞 +1 (234) 567-89-00</li>
+                        <li>✉️ info@agency.com</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">Personal</div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-group">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4>SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">See More</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">i</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>Copyright © 2022 Laaqiq. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>

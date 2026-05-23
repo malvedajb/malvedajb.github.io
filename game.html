@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Jed Malveda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Jed Malveda</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="game.html" class="active">Games</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline">CONTACT</a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-subtitle">JUST FOR FUN</span>
+                <h1>Tic-Tac-Toe</h1>
+                <p>Take a break and pass the time with a quick game.</p>
+            </div>
+        </section>
+
+        <section class="game-section">
+            <div class="container">
+                <div class="game-wrapper">
+
+                    <div class="score-board">
+                        <div class="score-item">
+                            <span class="score-mark x">X</span>
+                            <span class="score-count" id="score-x">0</span>
+                            <span class="score-label">Player X</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-mark draw">—</span>
+                            <span class="score-count" id="score-draws">0</span>
+                            <span class="score-label">Draws</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-mark o">O</span>
+                            <span class="score-count" id="score-o">0</span>
+                            <span class="score-label">Player O</span>
+                        </div>
+                    </div>
+
+                    <div class="game-status" id="game-status">Player X's turn</div>
+
+                    <div class="game-board" id="game-board">
+                        <button class="cell" data-index="0"></button>
+                        <button class="cell" data-index="1"></button>
+                        <button class="cell" data-index="2"></button>
+                        <button class="cell" data-index="3"></button>
+                        <button class="cell" data-index="4"></button>
+                        <button class="cell" data-index="5"></button>
+                        <button class="cell" data-index="6"></button>
+                        <button class="cell" data-index="7"></button>
+                        <button class="cell" data-index="8"></button>
+                    </div>
+
+                    <button class="btn btn-primary" id="reset-btn">New Game</button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-simple">
+            <p>Copyright &copy; 2024 Jed Malveda. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+</html>

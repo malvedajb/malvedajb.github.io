@@ -303,36 +303,56 @@ nav {
 .floating-badge.top-left { top: 20px; left: 20px; }
 .floating-badge.bottom-right { bottom: 20px; right: 20px; width: 80px; height: 80px; }
 
-/* ============================================================
-   Highlights Section (Home)
-   ============================================================ */
-.highlights-section {
-    background: var(--primary);
-    padding: 50px 0;
-}
 
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* ============================================================
+   Hobbies Section (Home)
+   ============================================================ */
+.home-hobbies-section {
+    background: var(--bg-light);
+    padding: 100px 0;
     text-align: center;
 }
 
-.highlight-card {
-    color: var(--white);
+.home-hobbies-section .section-title {
+    margin-bottom: 50px;
 }
 
-.highlight-number {
-    font-size: 40px;
-    font-weight: 700;
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.hobby-card {
+    background: var(--white);
+    padding: 38px 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.hobby-card:hover {
+    box-shadow: 0 8px 30px rgba(57, 20, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.hobby-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
     display: block;
-    line-height: 1.1;
 }
 
-.highlight-card p {
+.hobby-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.hobby-card p {
+    color: var(--text-medium);
     font-size: 14px;
-    opacity: 0.85;
-    margin-top: 5px;
+    line-height: 1.7;
 }
 
 /* ============================================================
@@ -1306,97 +1326,45 @@ legend {
    ============================================================ */
 .main-footer {
     background: var(--bg-dark);
-    padding: 70px 0 30px;
+    padding: 25px 0;
     color: var(--white);
     border-top: 1px solid var(--border-dark);
 }
 
-.footer-container {
+.footer-simple {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 60px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 }
 
-.footer-brand .logo {
-    margin-bottom: 10px;
-}
-
-.footer-tagline {
-    font-size: 14px;
-    color: var(--text-muted);
-    max-width: 200px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 80px;
-}
-
-.footer-group h4 {
-    color: var(--primary);
-    margin-bottom: 20px;
+.footer-simple p {
     font-size: 13px;
-    letter-spacing: 1px;
-}
-
-.footer-group ul li {
-    margin-bottom: 10px;
-}
-
-.footer-group ul li a {
     color: var(--text-muted);
-    font-size: 14px;
-}
-
-.footer-group ul li a:hover {
-    color: var(--white);
 }
 
 .footer-social {
     display: flex;
-    gap: 12px;
-    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
 }
 
 .footer-social a {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--white);
     transition: background 0.3s;
 }
 
 .footer-social a:hover {
     background: var(--primary-dark);
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 25px;
-    border-top: 1px solid var(--border-dark);
-    font-size: 13px;
-    color: var(--text-muted);
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.footer-legal a {
-    margin-left: 25px;
-    color: var(--text-muted);
-}
-
-.footer-legal a:hover {
-    color: var(--white);
 }
 
 /* ============================================================
@@ -1436,6 +1404,10 @@ legend {
    Responsive
    ============================================================ */
 @media (max-width: 1024px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .services-grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1519,6 +1491,10 @@ legend {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
     .services-grid,
     .services-grid-4 {
         grid-template-columns: 1fr;
@@ -1552,12 +1528,9 @@ legend {
         font-size: 28px;
     }
 
-    .footer-container {
+    .footer-simple {
         flex-direction: column;
-    }
-
-    .footer-links {
-        gap: 40px;
+        text-align: center;
     }
 
     .contact-form-large {

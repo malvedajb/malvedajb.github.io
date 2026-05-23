@@ -6,6 +6,7 @@
     <title>Jed Malveda | Systems Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -32,7 +33,7 @@
                     <h1>Hi! Im Jed.</h1>
                     <p>I provide a full service range including technical skills, design, and business understanding to bring your vision to life.</p>
                     <div class="hero-actions">
-                        <a href="portfolio.html" class="btn btn-primary">SEE MY WORK</a>
+                        <a href="#featured-work" class="btn btn-primary">SEE MY WORK</a>
                         <a href="about.html" class="btn btn-outline">ABOUT ME</a>
                     </div>
                 </div>
@@ -70,7 +71,7 @@
             </div>
         </section>
 
-        <section class="home-portfolio-section">
+        <section id="featured-work" class="home-portfolio-section">
             <div class="container">
                 <div class="section-header">
                     <div>
@@ -79,25 +80,92 @@
                     </div>
                     <a href="portfolio.html" class="btn btn-outline">VIEW ALL WORK</a>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <div class="item-overlay">
-                            <span class="item-category">UI/UX Design</span>
-                            <h4 class="item-title">E-Commerce App</h4>
+                <div class="featured-grid">
+
+                    <div class="featured-card">
+                        <div class="browser-mockup">
+                            <div class="browser-bar">
+                                <div class="browser-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="browser-url">maropost.com/commerce</div>
+                            </div>
+                            <div class="browser-content">
+                                <iframe src="https://www.maropost.com/commerce/" title="Neto by Maropost" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                                <div class="iframe-fallback">
+                                    <span>&#128274;</span>
+                                    <p>Preview blocked by site</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <div>
+                                <span class="item-category-dark">Integration</span>
+                                <h4>Neto by Maropost</h4>
+                                <p>E-commerce platform integration — product management, orders, and fulfilment.</p>
+                            </div>
+                            <a href="https://www.maropost.com/commerce/" target="_blank" rel="noopener" class="featured-link">Visit Site &rarr;</a>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <div class="item-overlay">
-                            <span class="item-category">Branding</span>
-                            <h4 class="item-title">Startup Identity</h4>
+
+                    <div class="featured-card">
+                        <div class="browser-mockup">
+                            <div class="browser-bar">
+                                <div class="browser-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="browser-url">azure.microsoft.com</div>
+                            </div>
+                            <div class="browser-content">
+                                <iframe src="https://azure.microsoft.com/en-us/" title="Microsoft Azure" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                                <div class="iframe-fallback">
+                                    <span>&#128274;</span>
+                                    <p>Preview blocked by site</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <div>
+                                <span class="item-category-dark">Cloud</span>
+                                <h4>Microsoft Azure</h4>
+                                <p>Cloud infrastructure deployment and management using Microsoft Azure services.</p>
+                            </div>
+                            <a href="https://azure.microsoft.com/en-us/" target="_blank" rel="noopener" class="featured-link">Visit Site &rarr;</a>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <div class="item-overlay">
-                            <span class="item-category">Web Development</span>
-                            <h4 class="item-title">SaaS Dashboard</h4>
+
+                    <div class="featured-card">
+                        <div class="browser-mockup">
+                            <div class="browser-bar">
+                                <div class="browser-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="browser-url">adminlte.io</div>
+                            </div>
+                            <div class="browser-content">
+                                <iframe src="https://adminlte.io/themes/v4/" title="AdminLTE" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                                <div class="iframe-fallback">
+                                    <span>&#128274;</span>
+                                    <p>Preview blocked by site</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <div>
+                                <span class="item-category-dark">Web Development</span>
+                                <h4>AdminLTE</h4>
+                                <p>Admin dashboard template used as a base for internal tooling and back-office systems.</p>
+                            </div>
+                            <a href="https://adminlte.io/" target="_blank" rel="noopener" class="featured-link">Visit Site &rarr;</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -115,11 +183,10 @@
 
     <footer class="main-footer">
         <div class="container footer-simple">
-            <p>Copyright &copy; 2024 Gabriel Pires. All Rights Reserved.</p>
+            <p>Copyright &copy; 2024 Jed Malveda. All Rights Reserved.</p>
             <div class="footer-social">
-                <a href="https://dribbble.com" target="_blank" rel="noopener" title="Dribbble">Dr</a>
-                <a href="https://behance.net" target="_blank" rel="noopener" title="Behance">Be</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn">Li</a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>

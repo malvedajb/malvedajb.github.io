@@ -150,6 +150,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ── Iframe block detection ────────────────────────────────
+    document.querySelectorAll('.browser-content iframe').forEach(iframe => {
+        const wrapper = iframe.parentElement;
+
+        // Mark as blocked on load error
+        iframe.addEventListener('error', () => {
+            wrapper.classList.add('blocked');
+        });
+
+        // Some sites load but with X-Frame-Options via a blank page;
+        // after a short delay check if the iframe has accessible content
+        iframe.addEventListener('load', () => {
+            try {
+                // If same-origin access succeeds it's fine; cross-origin will throw
+                const _ = iframe.contentDocument;
+            } catch {
+                // Cross-origin but loaded — likely OK visually, do nothing
+            }
+        });
+
+        // Fallback timeout: if the iframe src never triggers load within 6s, show fallback
+        const timeout = setTimeout(() => {
+            if (!iframe.complete && wrapper && !wrapper.classList.contains('blocked')) {
+                wrapper.classList.add('blocked');
+            }
+        }, 6000);
+
+        iframe.addEventListener('load', () => clearTimeout(timeout));
+    });
+
     // ── Animate skill bars on scroll ─────────────────────────
     const skillFills = document.querySelectorAll('.skill-fill');
     if (skillFills.length) {

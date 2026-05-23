@@ -1640,6 +1640,10 @@ legend {
         text-align: center;
     }
 
+    .hero-image {
+        order: -1;
+    }
+
     .hero-content h1 {
         font-size: 42px;
     }

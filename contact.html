@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gabriel Pires</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Personal</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary nav-contact-active">CONTACT</a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-subtitle">GET IN TOUCH</span>
+                <h1>Contact Me</h1>
+                <p>Have a project in mind or just want to say hello? Fill out the form below and I'll get back to you within 24 hours.</p>
+            </div>
+        </section>
+
+        <section class="contact-full-section">
+            <div class="container contact-full-container">
+
+                <div class="contact-form-wrapper contact-form-large">
+                    <h2>Send a Message</h2>
+                    <form id="contact-form" novalidate>
+
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name <span class="required">*</span></label>
+                                    <input type="text" id="first-name" name="first_name" placeholder="John" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="last-name" name="last_name" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+1 (234) 567-8900">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company / Organization</label>
+                                <input type="text" id="company" name="company" placeholder="Your Company Name">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Project Details</legend>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" placeholder="Project inquiry, question, etc." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type of Service Needed <span class="required">*</span></label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="service_type" value="ui_ux" required>
+                                        <span class="radio-custom"></span>
+                                        UI/UX Design
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="service_type" value="web_dev">
+                                        <span class="radio-custom"></span>
+                                        Web Development
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="service_type" value="mobile">
+                                        <span class="radio-custom"></span>
+                                        Mobile Design
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="service_type" value="branding">
+                                        <span class="radio-custom"></span>
+                                        Brand Identity
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="service_type" value="other">
+                                        <span class="radio-custom"></span>
+                                        Other / Not Sure
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Features You Need</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="responsive">
+                                        <span class="checkbox-custom"></span>
+                                        Responsive / Mobile-Friendly Design
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="seo">
+                                        <span class="checkbox-custom"></span>
+                                        SEO Optimization
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="analytics">
+                                        <span class="checkbox-custom"></span>
+                                        Analytics Integration
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="ecommerce">
+                                        <span class="checkbox-custom"></span>
+                                        E-Commerce Functionality
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="cms">
+                                        <span class="checkbox-custom"></span>
+                                        CMS / Content Management
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="features" value="social">
+                                        <span class="checkbox-custom"></span>
+                                        Social Media Integration
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget" name="budget">
+                                    <option value="" disabled selected>Select a budget range</option>
+                                    <option value="under_500">Under $500</option>
+                                    <option value="500_1000">$500 &ndash; $1,000</option>
+                                    <option value="1000_3000">$1,000 &ndash; $3,000</option>
+                                    <option value="3000_5000">$3,000 &ndash; $5,000</option>
+                                    <option value="over_5000">$5,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, goals, timeline, and any other relevant details..." required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>How Did You Find Me?</legend>
+                            <div class="radio-group radio-group-inline">
+                                <label class="radio-label">
+                                    <input type="radio" name="referral_source" value="google">
+                                    <span class="radio-custom"></span>
+                                    Google Search
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="referral_source" value="social">
+                                    <span class="radio-custom"></span>
+                                    Social Media
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="referral_source" value="referral">
+                                    <span class="radio-custom"></span>
+                                    Referral / Word of Mouth
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="referral_source" value="portfolio">
+                                    <span class="radio-custom"></span>
+                                    Dribbble / Behance
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="referral_source" value="other_source">
+                                    <span class="radio-custom"></span>
+                                    Other
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group form-group-consent">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" id="consent" required>
+                                <span class="checkbox-custom"></span>
+                                I agree that my information may be used to respond to my inquiry. <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">SEND MESSAGE</button>
+                        <p class="form-note">* Required fields. I typically respond within 24 hours.</p>
+                    </form>
+                </div>
+
+                <div class="contact-sidebar">
+                    <div class="contact-info-card">
+                        <span class="section-subtitle">CONTACT INFO</span>
+                        <h2>Let's Connect</h2>
+                        <p>Prefer a different way to reach out? Here are all the ways you can get in touch.</p>
+                        <ul class="contact-details">
+                            <li>
+                                <span class="contact-icon">📍</span>
+                                <div>
+                                    <strong>Location</strong>
+                                    <span>2247 Lunetta Street, TX 76301</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-icon">📞</span>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <span>+1 (234) 567-89-00</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-icon">✉️</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <span>gabriel@pires.design</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-icon">🕐</span>
+                                <div>
+                                    <strong>Response Time</strong>
+                                    <span>Within 24 hours</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-social-card">
+                        <h3>Find Me Online</h3>
+                        <div class="social-links">
+                            <a href="https://dribbble.com" target="_blank" rel="noopener" class="social-link">
+                                <span class="social-icon">Dr</span>
+                                <span>Dribbble</span>
+                            </a>
+                            <a href="https://behance.net" target="_blank" rel="noopener" class="social-link">
+                                <span class="social-icon">Be</span>
+                                <span>Behance</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link">
+                                <span class="social-icon">Li</span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <h3>Frequently Asked</h3>
+                        <div class="faq-item">
+                            <strong>What is your typical timeline?</strong>
+                            <p>Most projects take 2–6 weeks depending on scope. See my <a href="services.html">services page</a> for details.</p>
+                        </div>
+                        <div class="faq-item">
+                            <strong>Do you work with clients globally?</strong>
+                            <p>Yes! I work with clients worldwide via video calls and async communication.</p>
+                        </div>
+                        <div class="faq-item">
+                            <strong>What information should I have ready?</strong>
+                            <p>A brief overview of your project, goals, target audience, and timeline helps me give you an accurate quote.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">Personal</div>
+                <p class="footer-tagline">Designing experiences that matter.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-group">
+                    <h4>PAGES</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h4>RESOURCES</h4>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                        <li><a href="services.html">Pricing</a></li>
+                        <li><a href="portfolio.html">Case Studies</a></li>
+                        <li><a href="contact.html">Hire Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="https://dribbble.com" target="_blank" rel="noopener" title="Dribbble">Dr</a>
+                <a href="https://behance.net" target="_blank" rel="noopener" title="Behance">Be</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn">Li</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>Copyright &copy; 2024 Gabriel Pires. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -291,17 +291,21 @@ nav {
     position: relative;
 }
 
-.floating-badge {
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
+.hero-photo-wrapper {
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
-    position: absolute;
-    opacity: 0.7;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 4px solid var(--primary);
 }
 
-.floating-badge.top-left { top: 20px; left: 20px; }
-.floating-badge.bottom-right { bottom: 20px; right: 20px; width: 80px; height: 80px; }
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
 
 
 /* ============================================================
@@ -910,10 +914,11 @@ nav {
     flex: 0 0 380px;
 }
 
-.about-image-placeholder {
+.about-photo {
     width: 380px;
     height: 460px;
-    background: var(--bg-dark);
+    object-fit: cover;
+    object-position: center top;
     border-radius: 12px;
 }
 
@@ -1583,13 +1588,19 @@ legend {
     .about-image-wrapper {
         flex: none;
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .about-image-placeholder {
+    .about-photo {
         width: 100%;
         max-width: 380px;
         height: 300px;
-        margin: 0 auto;
+    }
+
+    .hero-photo-wrapper {
+        width: 280px;
+        height: 280px;
     }
 
     .contact-full-container {

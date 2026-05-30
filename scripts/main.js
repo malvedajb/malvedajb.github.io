@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ── Mobile navigation toggle ──────────────────────────────
     const navToggle = document.querySelector('.nav-toggle');
     if (navToggle) {
         let mobileNav = document.querySelector('.mobile-nav');
@@ -40,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Sticky header shadow ──────────────────────────────────
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Contact form submission ───────────────────────────────
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -108,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Live radio/checkbox visual feedback
         contactForm.querySelectorAll('input[type="radio"]').forEach(radio => {
             radio.addEventListener('change', () => {
                 const group = contactForm.querySelectorAll(`input[name="${radio.name}"]`);
@@ -130,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Portfolio filter buttons ──────────────────────────────
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item[data-category]');
 
@@ -150,27 +145,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Iframe block detection ────────────────────────────────
     document.querySelectorAll('.browser-content iframe').forEach(iframe => {
         const wrapper = iframe.parentElement;
 
-        // Mark as blocked on load error
         iframe.addEventListener('error', () => {
             wrapper.classList.add('blocked');
         });
 
-        // Some sites load but with X-Frame-Options via a blank page;
-        // after a short delay check if the iframe has accessible content
         iframe.addEventListener('load', () => {
             try {
-                // If same-origin access succeeds it's fine; cross-origin will throw
                 const _ = iframe.contentDocument;
             } catch {
-                // Cross-origin but loaded — likely OK visually, do nothing
             }
         });
 
-        // Fallback timeout: if the iframe src never triggers load within 6s, show fallback
         const timeout = setTimeout(() => {
             if (!iframe.complete && wrapper && !wrapper.classList.contains('blocked')) {
                 wrapper.classList.add('blocked');
@@ -180,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
         iframe.addEventListener('load', () => clearTimeout(timeout));
     });
 
-    // ── Animate skill bars on scroll ─────────────────────────
     const skillFills = document.querySelectorAll('.skill-fill');
     if (skillFills.length) {
         const savedWidths = Array.from(skillFills).map(el => el.style.width);
